@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#651d35">
+  <meta name="description" content="Maquette de boutique beauté ICEE COSMÉTIQUES — catalogue de démonstration.">
+  <title>ICEE COSMÉTIQUES — La beauté, avec caractère</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="demo-banner">
+    MAQUETTE DE DÉMONSTRATION
+    <span>• Produits et prix fictifs à valider</span>
+  </div>
+
+  <div class="announcement">✦ Votre routine beauté commence ici ✦</div>
+
+  <header class="header">
+    <a class="brand" href="#home">
+      <span class="monogram">I<sup>✦</sup></span>
+      <span>ICEE<small>COSMÉTIQUES</small></span>
+    </a>
+
+    <button id="menu-toggle" class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+
+    <nav id="nav">
+      <a href="#home">Accueil</a>
+      <a href="#shop">La boutique</a>
+      <a href="#story">Notre univers</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="head-actions">
+      <button id="search-toggle" class="plain" aria-label="Rechercher">⌕</button>
+      <button id="open-cart" class="cart-btn">Panier <b id="cart-count">0</b></button>
+    </div>
+  </header>
+
+  <div id="search-panel" class="search-panel" hidden>
+    <input id="search" type="search" placeholder="Rechercher un produit…">
+    <button id="clear-search">Effacer</button>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">BEAUTÉ • SOIN • ÉCLAT</p>
+        <h1>Révélez votre<br><em>propre éclat.</em></h1>
+        <p class="lead">
+          Explorez vos essentiels beauté dans une expérience simple,
+          élégante et pensée pour le quotidien.
+        </p>
+
+        <div class="actions">
+          <a class="btn dark" href="#shop">Explorer la boutique <span>↗</span></a>
+          <a class="underlink" href="#story">Découvrir notre univers →</a>
+        </div>
+
+        <p class="proof">
+          ✧
+          <span>
+            <b>La beauté, avec caractère.</b>
+            <small>Une maquette à personnaliser avec les produits officiels.</small>
+          </span>
+        </p>
+      </div>
+
+      <div class="hero-art" aria-label="Illustration décorative de produits cosmétiques">
+        <span class="art-caption">THE BEAUTY EDIT <small>NO. 01</small></span>
+        <div class="sun"></div>
+        <div class="bottle bottle-one"><span>ICEE</span><small>GLOW SERUM</small></div>
+        <div class="jar"><span>ICEE</span><small>DAILY CARE</small></div>
+        <div class="bottle bottle-two"><span>ICEE</span><small>SKIN ESSENCE</small></div>
+        <span class="art-bottom">YOUR BEAUTY MOMENT</span>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div>✧ <span><b>Vos essentiels</b><small>Une sélection à découvrir</small></span></div>
+      <div>♡ <span><b>Un échange humain</b><small>Questions par WhatsApp</small></span></div>
+      <div>↗ <span><b>Commande simple</b><small>Sur téléphone ou ordinateur</small></span></div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">LA SÉLECTION</p>
+          <h2>Vos essentiels <em>beauté.</em></h2>
+          <p class="muted">Choisissez vos favoris dans ce catalogue de démonstration.</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="categories" id="categories">
+          <button class="active" data-category="Tous">Tout voir</button>
+          <button data-category="Visage">Visage</button>
+          <button data-category="Corps">Corps</button>
+          <button data-category="Sérums">Sérums</button>
+          <button data-category="Accessoires">Accessoires</button>
+        </div>
+
+        <label class="sort">
+          Trier
+          <select id="sort">
+            <option value="featured">Sélection</option>
+            <option value="low">Prix croissant</option>
+            <option value="high">Prix décroissant</option>
+            <option value="name">Nom A–Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="result">
+        <span id="result-count">6 produits</span>
+        <span>Catalogue fictif de démonstration</span>
+      </div>
+
+      <div id="products" class="products"></div>
+
+      <div id="empty" class="empty" hidden>
+        <h3>Aucun produit trouvé</h3>
+        <p>Essayez un autre mot-clé ou une autre catégorie.</p>
+        <button id="reset" class="btn outline">Réinitialiser</button>
+      </div>
+    </section>
+
+    <section class="editorial" id="story">
+      <div class="editorial-art">
+        <div class="disc"></div>
+        <div class="editorial-jar">ICEE<small>BODY CARE</small></div>
+        <span>CARE FOR YOURSELF</span>
+      </div>
+
+      <div class="editorial-copy">
+        <p class="eyebrow">LE PETIT RITUEL</p>
+        <h2>Prendre soin de soi,<br><em>un geste à la fois.</em></h2>
+        <p>
+          La beauté, c’est aussi le temps que l’on s’accorde,
+          les gestes que l’on aime et la confiance que l’on cultive.
+        </p>
+        <a href="#shop" class="btn light">Trouver mes essentiels ↗</a>
+      </div>
+    </section>
+
+    <section class="section trust">
+      <div class="section-title centered">
+        <p class="eyebrow">L'EXPÉRIENCE ICEE</p>
+        <h2>Simple, claire, <em>personnelle.</em></h2>
+        <p class="muted">Contenu à valider avec l'équipe avant publication.</p>
+      </div>
+
+      <div class="trust-grid">
+        <article>
+          <small>01 / SÉLECTION</small>
+          <h3>Un catalogue clair</h3>
+          <p>Retrouvez les produits par catégorie et consultez les informations essentielles.</p>
+        </article>
+        <article>
+          <small>02 / ÉCHANGE</small>
+          <h3>Un contact humain</h3>
+          <p>Posez vos questions et confirmez votre commande directement avec la boutique.</p>
+        </article>
+        <article>
+          <small>03 / CONFORT</small>
+          <h3>Mobile d'abord</h3>
+          <p>Une navigation agréable sur téléphone, tablette et ordinateur.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div>
+        <p class="eyebrow">BESOIN D'AIDE ?</p>
+        <h2>Les questions<br><em>fréquentes.</em></h2>
+        <p class="muted">Les réponses définitives seront validées par la boutique.</p>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>Comment passer une commande ? <b>+</b></summary>
+          <p>Ajoutez les produits au panier et préparez un récapitulatif à envoyer sur WhatsApp. La boutique devra confirmer la commande.</p>
+        </details>
+        <details>
+          <summary>Les prix sont-ils définitifs ? <b>+</b></summary>
+          <p>Non. Les produits et prix de cette maquette sont fictifs et doivent être remplacés par les données officielles.</p>
+        </details>
+        <details>
+          <summary>Quels sont les frais de livraison ? <b>+</b></summary>
+          <p>Les zones, délais et frais de livraison sont à confirmer avec la boutique.</p>
+        </details>
+        <details>
+          <summary>Comment choisir un produit ? <b>+</b></summary>
+          <p>Contactez la boutique pour obtenir les informations officielles sur la composition, l'utilisation et les précautions.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div>
+        <p class="eyebrow">ON EN PARLE ?</p>
+        <h2>Votre prochain essentiel<br><em>n'est peut-être qu'à un clic.</em></h2>
+      </div>
+      <button id="contact" class="btn light">Contacter la boutique ↗</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <a class="brand footbrand" href="#home">
+        <span class="monogram">I<sup>✦</sup></span>
+        <span>ICEE<small>COSMÉTIQUES</small></span>
+      </a>
+
+      <p>
+        La beauté, avec caractère.
+        <small>Maquette de démonstration réalisée par Stalay Digital.</small>
+      </p>
+
+      <div>
+        <a href="#shop">Boutique</a>
+        <a href="#story">Notre univers</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> ICEE COSMÉTIQUES — Démonstration non officielle</span>
+      <span>Une idée prend forme avec <b>Stalay Digital</b>.</span>
+    </div>
+  </footer>
+
+  <div id="overlay" class="overlay" hidden></div>
+
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div>
+        <p class="eyebrow">VOTRE SÉLECTION</p>
+        <h2>Mon panier <small id="drawer-count">(0)</small></h2>
+      </div>
+      <button id="close-cart" class="close">×</button>
+    </div>
+
+    <div id="cart-items" class="cart-items"></div>
+
+    <div id="cart-empty" class="cart-empty">
+      <span>♡</span>
+      <h3>Votre panier est vide</h3>
+      <p>Vos futurs essentiels se trouvent ici.</p>
+      <button id="continue" class="btn dark">Continuer mes achats</button>
+    </div>
+
+    <div id="cart-footer" class="cart-footer" hidden>
+      <div class="total"><span>Sous-total estimé</span><b id="total">0 FCFA</b></div>
+      <p>Livraison et disponibilité à confirmer.</p>
+      <button id="checkout" class="btn dark wide">Commander sur WhatsApp ↗</button>
+    </div>
+  </aside>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" hidden>
+    <button id="close-modal" class="close modal-x">×</button>
+    <div id="modal-art" class="modal-art"></div>
+    <div class="modal-info">
+      <p id="modal-category" class="eyebrow"></p>
+      <h2 id="modal-title"></h2>
+      <b id="modal-price" class="modal-price"></b>
+      <p id="modal-description"></p>
+      <small>Produit d'exemple — informations à confirmer.</small>
+      <button id="modal-add" class="btn dark wide">Ajouter au panier +</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
